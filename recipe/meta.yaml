@@ -10,6 +10,7 @@ source:
   sha256: b0b9c0386117e2ebfeff47e0a607e478cb24aa74337eaa69a528d16e6fd3a217
 
 build:
+  skip: true  # [py<39]
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 2
   script_env:
@@ -24,13 +25,13 @@ requirements:
     - cmake
     - make
   host:
-    - python {{ python_min }}
+    - python
     - setuptools >=75
     - packaging >=23
     - pip
     - libmetatensor
   run:
-    - python >={{ python_min }}
+    - python
     - libmetatensor
     - numpy
 
@@ -40,7 +41,7 @@ test:
   commands:
     - pip check
   requires:
-    - python {{ python_min }}
+    - python
     - pip
 
 about:
