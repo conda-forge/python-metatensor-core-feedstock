@@ -12,7 +12,7 @@ source:
 build:
   skip: true  # [py<39]
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 4
+  number: 5
   script_env:
     # Don't build metatensor-core, but use the already compiled `libmetatensor` package
     - METATENSOR_CORE_PYTHON_USE_EXTERNAL_LIB="ON"
@@ -45,7 +45,7 @@ test:
     - pip
 
 about:
-  home: https://github.com/lab-cosmo/metatensor
+  home: https://github.com/metatensor/metatensor
   summary: Python bindings for metatensor-core
   license: BSD-3-Clause
   license_family: BSD
