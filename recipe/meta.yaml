@@ -12,7 +12,7 @@ source:
 build:
   skip: true  # [py<39]
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
   script_env:
     # Don't build metatensor-core, but use the already compiled `libmetatensor` package
     - METATENSOR_CORE_PYTHON_USE_EXTERNAL_LIB="ON"
