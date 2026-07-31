@@ -1,5 +1,5 @@
 {% set name = "metatensor-core" %}
-{% set version = "0.2.3" %}
+{% set version = "0.2.4" %}
 
 package:
   name: python-{{ name }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/metatensor_core-{{ version }}.tar.gz
-  sha256: 08a8f175af6bdd04cc9d54d867b88ddc9528803446859d4b67c197dcdfa7fdc1
+  sha256: 79765886c4939bc13e91760c117e90e2dc47fe5f761116a8c226565fcbc92def
 
 build:
   skip: true  # [py<39]
@@ -36,6 +36,7 @@ requirements:
     - python
     - libmetatensor {{ version }}
     - numpy
+    - ctypes-dlpack
 
 test:
   imports:
