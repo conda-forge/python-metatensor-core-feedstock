@@ -6,13 +6,13 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/metatensor_core-{{ version }}.tar.gz
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/metatensor_core-{{ version }}.tar.gz
   sha256: 79765886c4939bc13e91760c117e90e2dc47fe5f761116a8c226565fcbc92def
 
 build:
   skip: true  # [py<39]
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
   script_env:
     # Don't build metatensor-core, but use the already compiled `libmetatensor` package
     - METATENSOR_CORE_PYTHON_USE_EXTERNAL_LIB="ON"
