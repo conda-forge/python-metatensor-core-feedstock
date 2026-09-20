@@ -1,5 +1,5 @@
 {% set name = "metatensor-core" %}
-{% set version = "0.2.4" %}
+{% set version = "0.2.5" %}
 
 package:
   name: python-{{ name }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/metatensor_core-{{ version }}.tar.gz
-  sha256: 79765886c4939bc13e91760c117e90e2dc47fe5f761116a8c226565fcbc92def
+  sha256: 1e24dc11620f108ce99009021f9245694dab755bced2e39bdd83452a03cd9a61
 
 build:
   skip: true  # [py<39]
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
   script_env:
     # Don't build metatensor-core, but use the already compiled `libmetatensor` package
     - METATENSOR_CORE_PYTHON_USE_EXTERNAL_LIB="ON"
