@@ -1,5 +1,5 @@
 {% set name = "metatensor-core" %}
-{% set version = "0.2.5" %}
+{% set version = "0.2.6" %}
 
 package:
   name: python-{{ name }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/metatensor_core-{{ version }}.tar.gz
-  sha256: 1e24dc11620f108ce99009021f9245694dab755bced2e39bdd83452a03cd9a61
+  sha256: 08673590fb689ca1fb2786a2506849e40718470ae37703dc31560e7254ddfc33
 
 build:
   skip: true  # [py<39]
